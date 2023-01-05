@@ -1,5 +1,4 @@
-// Import the Slate editor factory.
-import { useState } from "react";
+import { useMemo } from "react";
 import { createEditor } from "slate";
 
 // Import the Slate components and React plugin.
@@ -17,7 +16,7 @@ const initialValue = [
 ];
 
 const SlateEditor = props => {
-  const [editor] = useState(() => withReact(createEditor()));
+  const editor = useMemo(() => withReact(createEditor()), []);
   return (
     <div>
       <h2> Slate </h2>
