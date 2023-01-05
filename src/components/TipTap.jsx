@@ -4,12 +4,7 @@ import style from "./TipTap.module.scss";
 import { Image } from "@tiptap/extension-image";
 import { useCallback } from "react";
 
-Image.configure({
-  // inline: true,
-  HTMLAttributes: {
-    class: "tiptap-editor-img",
-  },
-});
+// Image.configure();
 
 const TipTap = props => {
   const editor = useEditor({
@@ -23,8 +18,14 @@ const TipTap = props => {
     editor.chain().focus().setImage({ src: url }).run();
   }, [editor]);
 
+  const deleteImage = useCallback(() => {
+    const node = editor.state.selection.node;
+    if (!node || node.type.name !== "image") return;
+    editor.commands.deleteSelection();
+  }, [editor]);
+
   if (!editor) return null;
-  console.log("editor", editor);
+
   return (
     <div className={style.tiptapContainer}>
       <h2>TipTap</h2>

@@ -16,6 +16,7 @@ const {
   Redo,
   Link,
   Unlink,
+  InsertImage,
 } = EditorTools;
 
 const editorStyles = `
@@ -44,7 +45,7 @@ const KendoReactEditor = props => {
           [Undo, Redo],
           [Link, Unlink],
           [AlignLeft, AlignCenter, AlignRight],
-          [OrderedList, UnorderedList, Indent, Outdent],
+          [OrderedList, UnorderedList, Indent, Outdent, InsertImage],
         ]}
         contentStyle={{ height: 320 }}
         defaultContent={content}

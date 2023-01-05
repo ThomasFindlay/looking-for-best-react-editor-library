@@ -2,7 +2,7 @@
 import { useState, useMemo } from "react";
 import imageExtensions from "image-extensions";
 import isUrl from "is-url";
-import { Transforms, createEditor, Descendant } from "slate";
+import { Transforms, createEditor } from "slate";
 import {
   Slate,
   Editable,
@@ -12,6 +12,7 @@ import {
   withReact,
   ReactEditor,
 } from "slate-react";
+import { css } from "@emotion/css";
 
 const initialValue = [
   {
@@ -100,19 +101,6 @@ const Image = ({ attributes, children, element }) => {
             box-shadow: ${selected && focused ? "0 0 0 3px #B4D5FF" : "none"};
           `}
         />
-        <Button
-          active
-          onClick={() => Transforms.removeNodes(editor, { at: path })}
-          className={css`
-            display: ${selected && focused ? "inline" : "none"};
-            position: absolute;
-            top: 0.5em;
-            left: 0.5em;
-            background-color: white;
-          `}
-        >
-          <Icon>delete</Icon>
-        </Button>
       </div>
     </div>
   );
@@ -121,7 +109,7 @@ const Image = ({ attributes, children, element }) => {
 const InsertImageButton = () => {
   const editor = useSlateStatic();
   return (
-    <Button
+    <button
       onMouseDown={event => {
         event.preventDefault();
         const url = window.prompt("Enter the URL of the image:");
@@ -132,8 +120,8 @@ const InsertImageButton = () => {
         url && insertImage(editor, url);
       }}
     >
-      <Icon>image</Icon>
-    </Button>
+      Add Image
+    </button>
   );
 };
 
@@ -150,9 +138,9 @@ const SlateEditor = props => {
     <div>
       <h2> Slate With Image </h2>
       <Slate editor={editor} value={initialValue}>
-        <Toolbar>
+        <div>
           <InsertImageButton />
-        </Toolbar>
+        </div>
         <Editable renderElement={props => <Element {...props} />} />
       </Slate>
     </div>
