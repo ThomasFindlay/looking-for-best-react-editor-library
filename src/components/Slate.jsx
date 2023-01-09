@@ -21,7 +21,12 @@ const SlateEditor = props => {
     <div>
       <h2> Slate </h2>
       <Slate editor={editor} value={initialValue}>
-        <Editable />
+        <Editable
+          style={{
+            border: "1px solid grey",
+            padding: "0.25rem",
+          }}
+        />
       </Slate>
     </div>
   );

@@ -16,7 +16,7 @@ function App() {
             width: 700,
             display: "flex",
             flexDirection: "column",
-            gap: 24,
+            gap: 32,
           }}
         >
           <Slate />

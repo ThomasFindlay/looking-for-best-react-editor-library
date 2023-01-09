@@ -138,10 +138,16 @@ const SlateEditor = props => {
     <div>
       <h2> Slate With Image </h2>
       <Slate editor={editor} value={initialValue}>
-        <div>
+        <div style={{ marginBottom: "1rem" }}>
           <InsertImageButton />
         </div>
-        <Editable renderElement={props => <Element {...props} />} />
+        <Editable
+          renderElement={props => <Element {...props} />}
+          style={{
+            border: "1px solid grey",
+            padding: "0.25rem",
+          }}
+        />
       </Slate>
     </div>
   );
