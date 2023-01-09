@@ -1,7 +1,7 @@
 import "./App.css";
 import KendoReactEditor from "./components/KendoReactEditor";
 import Slate from "./components/Slate";
-import SlateWithImage from "./components/SlateWithImage";
+import SlateWithImage from "./components/SlateWithImage/SlateWithImage";
 import TipTap from "./components/TipTap";
 import Quill from "./components/Quill";
 
@@ -19,11 +19,11 @@ function App() {
             gap: 32,
           }}
         >
-          <Slate />
+          {/* <Slate /> */}
           <SlateWithImage />
-          <TipTap />
-          <Quill />
-          <KendoReactEditor />
+          {/* <TipTap /> */}
+          {/* <Quill /> */}
+          {/* <KendoReactEditor /> */}
         </div>
       </div>
     </div>
