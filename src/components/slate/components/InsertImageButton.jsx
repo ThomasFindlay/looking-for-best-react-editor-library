@@ -17,6 +17,7 @@ export const withImages = editor => {
 
   editor.insertData = data => {
     const text = data.getData("text/plain");
+
     const { files } = data;
 
     if (files && files.length > 0) {

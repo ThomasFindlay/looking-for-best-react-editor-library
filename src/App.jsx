@@ -1,7 +1,7 @@
 import "./App.css";
 import KendoReactEditor from "./components/KendoReactEditor";
 import Slate from "./components/Slate";
-import SlateWithImage from "./components/SlateWithImage/SlateWithImage";
+import SlateWithImage from "./components/slate/SlateWithImage";
 import TipTap from "./components/TipTap";
 import Quill from "./components/Quill";
 
