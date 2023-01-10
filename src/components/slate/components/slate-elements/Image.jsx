@@ -4,6 +4,7 @@ import { css } from "@emotion/css";
 const Image = ({ attributes, children, element }) => {
   const selected = useSelected();
   const focused = useFocused();
+
   return (
     <div {...attributes}>
       {children}

@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-
 import { createEditor } from "slate";
 import { Slate, Editable, withReact } from "slate-react";
 import InsertImageButton, { withImages } from "./components/InsertImageButton";

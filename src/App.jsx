@@ -10,21 +10,19 @@ function App() {
     <div className="App">
       <h1>React Editors</h1>
 
-      <div style={{}}>
-        <div
-          style={{
-            width: 700,
-            display: "flex",
-            flexDirection: "column",
-            gap: 32,
-          }}
-        >
-          {/* <Slate /> */}
-          <SlateWithImage />
-          {/* <TipTap /> */}
-          {/* <Quill /> */}
-          {/* <KendoReactEditor /> */}
-        </div>
+      <div
+        style={{
+          width: 700,
+          display: "flex",
+          flexDirection: "column",
+          gap: 32,
+        }}
+      >
+        {/* <Slate /> */}
+        {/* <SlateWithImage /> */}
+        {/* <TipTap /> */}
+        {/* <Quill /> */}
+        <KendoReactEditor />
       </div>
     </div>
   );

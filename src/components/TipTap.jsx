@@ -4,7 +4,7 @@ import style from "./TipTap.module.scss";
 import { Image } from "@tiptap/extension-image";
 import { useCallback } from "react";
 
-// Image.configure();
+Image.configure({});
 
 const TipTap = props => {
   const editor = useEditor({
@@ -16,12 +16,6 @@ const TipTap = props => {
     const url = window.prompt("URL");
     if (!url) return;
     editor.chain().focus().setImage({ src: url }).run();
-  }, [editor]);
-
-  const deleteImage = useCallback(() => {
-    const node = editor.state.selection.node;
-    if (!node || node.type.name !== "image") return;
-    editor.commands.deleteSelection();
   }, [editor]);
 
   if (!editor) return null;
