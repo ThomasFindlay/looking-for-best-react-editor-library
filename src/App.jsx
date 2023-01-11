@@ -1,9 +1,4 @@
 import "./App.css";
-import KendoReactEditor from "./components/KendoReactEditor";
-import Slate from "./components/Slate";
-import SlateWithImage from "./components/slate/SlateWithImage";
-import TipTap from "./components/TipTap";
-import Quill from "./components/Quill";
 
 function App() {
   return (
@@ -17,13 +12,7 @@ function App() {
           flexDirection: "column",
           gap: 32,
         }}
-      >
-        <Slate />
-        <SlateWithImage />
-        <TipTap />
-        <Quill />
-        <KendoReactEditor />
-      </div>
+      ></div>
     </div>
   );
 }
