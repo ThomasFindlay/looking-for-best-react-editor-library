@@ -18,10 +18,10 @@ function App() {
           gap: 32,
         }}
       >
-        {/* <Slate /> */}
-        {/* <SlateWithImage /> */}
-        {/* <TipTap /> */}
-        {/* <Quill /> */}
+        <Slate />
+        <SlateWithImage />
+        <TipTap />
+        <Quill />
         <KendoReactEditor />
       </div>
     </div>
